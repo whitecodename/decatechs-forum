@@ -35,11 +35,9 @@ This project is a management platform where the structure is presented with its 
 
 ### Setup
 ##### Prerequisites
-PHP >= 8.2 if you want to use symfony 7
-
-Composer
-
-MySQL
+- PHP >= 8.2 if you want to use symfony 7
+- Composer
+- MySQL
 
 ##### Steps Clone the repository:
 
@@ -116,28 +114,28 @@ These are the differents interfaces of the plateform :
 - ![Home5](./public/images/home5.png)
 
 #### Services
-![Services](./public/images/services.png)
+- ![Services](./public/images/services.png)
 
 #### Blog
-![Blog](./public/images/blog.png)
+- ![Blog](./public/images/blog.png)
 
 ##### Post
 
 ###### Add
-![Add](./public/images/add-post.png)
+- ![Add](./public/images/add-post.png)
 
 ###### View Post
-![View](./public/images/view-post.png)
+- ![View](./public/images/view-post.png)
 
 ##### Comment
 
 ###### Add
-![Add](./public/images/add-comment.png)
+- ![Add](./public/images/add-comment.png)
 
 #### Authentification
 
 ##### Registration
-![Registration](./public/images/registration.png)
+- ![Registration](./public/images/register.png)
 
 ##### Login
-![Login](./public/images/login.png)
+- ![Login](./public/images/login.png)
