@@ -36,7 +36,9 @@ This project is a management platform where the structure is presented with its 
 ### Setup
 ##### Prerequisites
 PHP >= 8.2 if you want to use symfony 7
+
 Composer
+
 MySQL
 
 ##### Steps Clone the repository:
@@ -81,18 +83,18 @@ php -S localhost:8000 -t public
 #### Routes Configuration
 hese are the routes available on the platform:
 
-- About Page: AboutController::index
-- Admin Page: AdminController::index
-- Comment Page: CommentController::index
-- Create Comment Page: CommentController::create
-- Forum Page: ForumController::index
-- Show a service's posts: ForumController::show
-- Home Page: HomeController::index
-- Show a post's comments: PostController::show
-- Registration Page: RegistrationController::register
-- Login Page: SecurityController::login
-- Logout Page: SecurityController::logout
-- Services Page: ServiceController::index
+- About Page: **AboutController::index**
+- Admin Page: **AdminController::index**
+- Comment Page: **CommentController::index**
+- Create Comment Page: **CommentController::create**
+- Forum Page: **ForumController::index**
+- Show a service's posts: **ForumController::show**
+- Home Page: **HomeController::index**
+- Show a post's comments: **PostController::show**
+- Registration Page: **RegistrationController::register**
+- Login Page: **SecurityController::login**
+- Logout Page: **SecurityController::logout**
+- Services Page: **ServiceController::index**
 
 #### Environment Configuration
 Update the .env.local file with your database credentials, mailer settings, and other environment-specific variables.
@@ -106,23 +108,12 @@ APP_SECRET=your_secret_key
 ### Overview
 These are the differents interfaces of the plateform :
 
-        |- Home
-        |- Services
-        |- Blog
-            |- Post
-              |- Add
-              |- View Post
-            |- Comment
-              |- Add
-        |- Authentification
-            |- Registration
-            |- Login
 #### HomePage
-![Home1](./public/images/home1.png)
-![Home2](./public/images/home2.png)
-![Home3](./public/images/home3.png)
-![Home4](./public/images/home4.png)
-![Home5](./public/images/home5.png)
+- ![Home1](./public/images/home1.png)
+- ![Home2](./public/images/home2.png)
+- ![Home3](./public/images/home3.png)
+- ![Home4](./public/images/home4.png)
+- ![Home5](./public/images/home5.png)
 
 #### Services
 ![Services](./public/images/services.png)
