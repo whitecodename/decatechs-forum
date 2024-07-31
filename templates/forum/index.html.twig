@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title "Forum" %}
+
+{% block body %}
+    <section class="forum">
+        <div class="services container-fluid">
+            <p class="title">Nos Services</p>
+            <ul class="list-group">
+                {% for service in services %}
+                    <li class="list-group-item">
+                        <a href="{{ path('forum.show', { service_id: service.id }) }}">{{ service.name }} ({{ postsCount[service.id] }})</a>
+                    </li>
+                {% endfor %}
+            </ul>
+            <p class="add-post">
+                <a href="{{ path('post.create') }}"><i class="bi bi-plus-circle"></i>Ajouter un post</a>
+            </p>
+        </div>
+        <div class="container-fluid discussion">
+            {% for post in posts %}
+                <div class="post">
+                    <p class="title">{{ post.title }}</p>
+                    <p class="content">{{ post.content }}</p>
+                    <div class="post-info">
+                        <p class="owner">
+                            <i class="bi bi-person"></i>
+                            {{ post.owner.username | capitalize }}
+                        </p>
+                        <div class="see-comment">
+                            <a href="{{ path('comment.show', {post_id: post.id}) }}" class="btn btn-primary">Voir les commentaires</a>
+                        </div>
+                        <p class="date">
+                            {{ post.createdAt|date('d/m/Y, H:i') }}
+                        </p>
+                    </div>
+                </div>
+            {% else %}
+                <p class="no-content">Aucun post disponible.</p>
+            {% endfor %}
+        </div>
+    </section>
+{% endblock %}

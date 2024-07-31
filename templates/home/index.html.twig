@@ -1,0 +1,218 @@
+{% extends 'base.html.twig' %}
+
+{% block title "Decatechs FORUM ! " %}
+
+{% block body %}
+    <!-- Banner-->
+    <div class="banner">
+        <a class="nav-link" aria-current="page" href="{{ path('service.index') }}">See our Services</a>
+    </div>
+
+    <!-- Structure presentation -->
+    <section id="presentation" class="py-5">
+        <div class="container-fluid">
+            <h2 class="mb-4">Présentation</h2>
+
+            <p><strong>À propos de DECATECHS</strong></p>
+            <p>
+                DECATECHS est une entreprise leader dans le domaine des technologies de l'information, dédiée à l'innovation et à l'excellence. Fondée avec une vision claire de transformation digitale, notre mission est de fournir des solutions technologiques de pointe qui répondent aux besoins dynamiques de nos clients.
+            </p>
+
+            <p><strong>Notre Mission</strong></p>
+            <p>
+                Nous nous engageons à offrir des services de haute qualité dans les domaines du conseil en IT, du développement logiciel, de la numérisation des systèmes, et bien plus encore. Nous visons à transformer les défis technologiques de nos clients en opportunités de croissance grâce à des solutions sur mesure et une expertise technique reconnue.
+            </p>
+
+            <p><strong>Nos Valeurs</strong></p>
+            <div class="values">
+                <div class="card">
+                    <img src="{{ asset('images/innovation.jpg') }}" class="card-img-top" alt="innovation">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                    <h5 class="card-title">Innovation</h5>
+                        <p class="card-text">Nous croyons en l'innovation continue pour rester à la pointe des technologies et répondre aux évolutions du marché.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="{{ asset('images/excellence.jpg') }}" class="card-img-top" alt="excellence">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                    <h5 class="card-title">Excellence</h5>
+                        <p class="card-text">Nous nous engageons à fournir des solutions de qualité supérieure qui dépassent les attentes de nos clients.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="{{ asset('images/integrity.jpg') }}" class="card-img-top" alt="integrity">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <h5 class="card-title">Intégrité</h5>
+                        <p class="card-text">Nous agissons avec transparence et honnêteté dans toutes nos interactions professionnelles.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="{{ asset('images/collaboration.jpg') }}" class="card-img-top" alt="collaboration">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                    <h5 class="card-title">Collaboration</h5>
+                        <p class="card-text">Nous valorisons le travail d'équipe et la collaboration pour atteindre les meilleurs résultats possibles.</p>
+                    </div>
+                </div>
+            </div>
+
+            <p>
+                Chez DECATECHS, chaque projet est une opportunité de démontrer notre expertise et notre passion pour la technologie. Découvrez comment nous pouvons vous aider à atteindre vos objectifs en explorant nos services et en nous contactant pour une consultation personnalisée.
+            </p>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="py-4">
+        <div class="container-fluid">
+            <h2 class="mb-4">Nos Services</h2>
+            <p>DECATECHS vous propose une large gamme de services.</p>
+        </div>
+
+        <!-- Carousel -->
+        <div id="carouselExampleAutoplay" class="carousel slide" data-bs-ride="carousel">
+            <!-- Indicateurs -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleAutoplay" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleAutoplay" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleAutoplay" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleAutoplay" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#carouselExampleAutoplay" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                <button type="button" data-bs-target="#carouselExampleAutoplay" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                <button type="button" data-bs-target="#carouselExampleAutoplay" data-bs-slide-to="6" aria-label="Slide 7"></button>
+            </div>
+
+            <!-- Carousel Inner -->
+            <div class="carousel-inner">
+                {% for service in services %}
+                    <div class="carousel-item {% if loop.first %}active{% endif %}">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-6 img">
+                                    <img src="{{ asset('images/' ~ service.image) }}" alt="{{ service.name }}">
+                                </div>
+                                <div class="col-md-6 info">
+                                    <p class="title">{{ service.name }}</p>
+                                    <p class="content">{{ service.description }}</p>
+                                    <div>
+                                        <a href="{{ path('forum.show', { service_id: service.id }) }}" class="btn btn-primary">Voir le forum</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+
+            <!-- Flèches de navigation -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplay" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Précédent</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplay" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Suivant</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- Équipe -->
+    <section id="team" class="py-5">
+        <div class="container-fluid">
+            <h2 class="mb-4">Notre Équipe</h2>
+            <div class="team">
+                <div class="card">
+                    <img src="{{ asset('images/profil.jpg') }}" class="card-img-top" alt="Alice Dupont">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <h5 class="card-title">Alice Dupont</h5>
+                        <p class="card-text">Chef de Projet Technique</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="{{ asset('images/profil.jpg') }}" class="card-img-top" alt="Maxime Lefèvre">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <h5 class="card-title">Maxime Lefèvre</h5>
+                        <p class="card-text">Développeur Frontend</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="{{ asset('images/profil.jpg') }}" class="card-img-top" alt="Claire Martin">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <h5 class="card-title">Claire Martin</h5>
+                        <p class="card-text">Responsable Marketing</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="{{ asset('images/profil.jpg') }}" class="card-img-top" alt="Paul Bernard">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <h5 class="card-title">Paul Bernard</h5>
+                        <p class="card-text">Ingénieur Logiciel</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="{{ asset('images/profil.jpg') }}" class="card-img-top" alt="Sophie Rousseau">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <h5 class="card-title">Sophie Rousseau</h5>
+                        <p class="card-text">Responsable des Ressources Humaines</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="{{ asset('images/profil.jpg') }}" class="card-img-top" alt="Julien Moreau">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <h5 class="card-title">Julien Moreau</h5>
+                        <p class="card-text">Architecte Cloud</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="{{ asset('images/profil.jpg') }}" class="card-img-top" alt="Emma Dubois">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <h5 class="card-title">Emma Dubois</h5>
+                        <p class="card-text">Analyste de Données</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="{{ asset('images/profil.jpg') }}" class="card-img-top" alt="Lucas Dubois">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <h5 class="card-title">Lucas Dubois</h5>
+                        <p class="card-text">Concepteur UX/UI</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="{{ asset('images/profil.jpg') }}" class="card-img-top" alt="Chloé Bernard">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <h5 class="card-title">Chloé Bernard</h5>
+                        <p class="card-text">Responsable de la Relation Client</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="{{ asset('images/profil.jpg') }}" class="card-img-top" alt="Alexandre Lefebvre">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <h5 class="card-title">Alexandre Lefebvre</h5>
+                        <p class="card-text">Développeur Backend</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="{{ asset('images/profil.jpg') }}" class="card-img-top" alt="Léa Fournier">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <h5 class="card-title">Léa Fournier</h5>
+                        <p class="card-text">Spécialiste en Cybersécurité</p>
+                        <p class="card-contact">Téléphone : 01 23 45 67 99</p>
+                        <p class="card-email">lea.fournier@example.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

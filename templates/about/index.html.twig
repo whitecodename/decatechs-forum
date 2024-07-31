@@ -1,0 +1,114 @@
+{# templates/about_us/index.html.twig #}
+{% extends 'base.html.twig' %}
+
+{% block title %}À Propos{% endblock %}
+
+{% block body %}
+    <div class="container-fluid">
+        <h1>À Propos de Nous</h1>
+        <p class="text-center">Bienvenue sur la page À Propos de Nous. Ici, vous découvrez notre mission, notre mission et l'équipe derrière notre entreprise.</p>
+
+        <section>
+            <h2>Notre Mission</h2>
+            <p>Notre mission est de fournir des services exceptionnels à nos clients tout en nous engageant à des pratiques durables et éthiques.</p>
+        </section>
+
+        <!-- Équipe -->
+        <section id="team" class="py-5">
+            <div class="container-fluid">
+                <h2 class="mb-4">Notre Équipe</h2>
+                <div class="team">
+                    <div class="card">
+                        <img src="{{ asset('images/profil.jpg') }}" class="card-img-top" alt="Alice Dupont">
+                        <div class="card-body d-flex flex-column justify-content-between">
+                            <h5 class="card-title">Alice Dupont</h5>
+                            <p class="card-text">Chef de Projet Technique</p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="{{ asset('images/profil.jpg') }}" class="card-img-top" alt="Maxime Lefèvre">
+                        <div class="card-body d-flex flex-column justify-content-between">
+                            <h5 class="card-title">Maxime Lefèvre</h5>
+                            <p class="card-text">Développeur Frontend</p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="{{ asset('images/profil.jpg') }}" class="card-img-top" alt="Claire Martin">
+                        <div class="card-body d-flex flex-column justify-content-between">
+                            <h5 class="card-title">Claire Martin</h5>
+                            <p class="card-text">Responsable Marketing</p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="{{ asset('images/profil.jpg') }}" class="card-img-top" alt="Paul Bernard">
+                        <div class="card-body d-flex flex-column justify-content-between">
+                            <h5 class="card-title">Paul Bernard</h5>
+                            <p class="card-text">Ingénieur Logiciel</p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="{{ asset('images/profil.jpg') }}" class="card-img-top" alt="Sophie Rousseau">
+                        <div class="card-body d-flex flex-column justify-content-between">
+                            <h5 class="card-title">Sophie Rousseau</h5>
+                            <p class="card-text">Responsable des Ressources Humaines</p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="{{ asset('images/profil.jpg') }}" class="card-img-top" alt="Julien Moreau">
+                        <div class="card-body d-flex flex-column justify-content-between">
+                            <h5 class="card-title">Julien Moreau</h5>
+                            <p class="card-text">Architecte Cloud</p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="{{ asset('images/profil.jpg') }}" class="card-img-top" alt="Emma Dubois">
+                        <div class="card-body d-flex flex-column justify-content-between">
+                            <h5 class="card-title">Emma Dubois</h5>
+                            <p class="card-text">Analyste de Données</p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="{{ asset('images/profil.jpg') }}" class="card-img-top" alt="Lucas Dubois">
+                        <div class="card-body d-flex flex-column justify-content-between">
+                            <h5 class="card-title">Lucas Dubois</h5>
+                            <p class="card-text">Concepteur UX/UI</p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="{{ asset('images/profil.jpg') }}" class="card-img-top" alt="Chloé Bernard">
+                        <div class="card-body d-flex flex-column justify-content-between">
+                            <h5 class="card-title">Chloé Bernard</h5>
+                            <p class="card-text">Responsable de la Relation Client</p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="{{ asset('images/profil.jpg') }}" class="card-img-top" alt="Alexandre Lefebvre">
+                        <div class="card-body d-flex flex-column justify-content-between">
+                            <h5 class="card-title">Alexandre Lefebvre</h5>
+                            <p class="card-text">Développeur Backend</p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="{{ asset('images/profil.jpg') }}" class="card-img-top" alt="Léa Fournier">
+                        <div class="card-body d-flex flex-column justify-content-between">
+                            <h5 class="card-title">Léa Fournier</h5>
+                            <p class="card-text">Spécialiste en Cybersécurité</p>
+                            <p class="card-contact">Téléphone : 01 23 45 67 99</p>
+                            <p class="card-email">lea.fournier@example.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+{% endblock %}

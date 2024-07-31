@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Administration{% endblock %}
+
+{% block body %}
+    <div class="menu container-fluid">
+        <p class="title">Menu</p>
+        <ul class="list-group">
+            <li class="list-group-item">
+                <a href="{{ path('admin.users') }}">Voir tous les utilisateurs</a>
+            </li>
+        </ul>
+        <p class="add-post">
+            <a href="{{ path('post.create') }}"><i class="bi bi-plus-circle"></i>Ajouter un post</a>
+        </p>
+    </div>
+{% endblock %}
+
+{#{% for user in users %}#}
+{#    <li class="list-group-item">#}
+{#        <a href="">{{ user.name }}</a>#}
+{#    </li>#}
+{#{% endfor %}#}

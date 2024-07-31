@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Services{% endblock %}
+
+{% block body %}
+    <div class="container-fluid mx-1">
+        <h1>Nos Services</h1>
+        <p class="text-center mb-5">Découvrez nos différents services et comment nous pouvons vous aider. Chaque service est détaillé ci-dessous pour vous fournir toutes les informations nécessaires.</p>
+
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">Image</th>
+                <th scope="col">Nom</th>
+                <th scope="col">Description</th>
+                <th scope="col">Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for service in services %}
+                <tr class="service-table">
+                    <td class="align-middle image"><img src="{{ asset('images/' ~ service.image) }}" alt="{{ service.name }}" class="img-thumbnail"></td>
+                    <td class="align-middle name">{{ service.name }}</td>
+                    <td class="align-middle description">{{ service.description }}</td>
+                    <td class="align-middle action">
+                        <a href="{{ path('forum.show', { service_id: service.id }) }}" class="btn btn-primary">Voir le forum <p style="margin: 0">({{ postsCount[service.id] }} posts)</p></a>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}
